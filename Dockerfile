@@ -53,4 +53,4 @@ EXPOSE 443
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 # start redis
-RUN redis-server
+RUN service redis-server start
