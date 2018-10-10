@@ -54,3 +54,5 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 # start redis
 RUN service redis-server start
+
+EXPOSE 6379
