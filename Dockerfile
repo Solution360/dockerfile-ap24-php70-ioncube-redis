@@ -47,12 +47,15 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 #RUN service apache2 restart
 
+
+RUN redis-server --daemonize yes
+
 EXPOSE 80
 EXPOSE 443
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
-# start redis
-CMD service redis-server start
+
+
 
 
