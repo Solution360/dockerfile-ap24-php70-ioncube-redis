@@ -48,7 +48,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 #RUN service apache2 restart
 
 
-RUN redis-server --daemonize yes
+CMD redis-server --daemonize yes
 
 EXPOSE 80
 EXPOSE 443
